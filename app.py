@@ -16,5 +16,16 @@ def inicio():
         }
     }
 
+@app.route("/usuarios", methods=["GET"])
+def usuarios():
+    return {
+        "status": "ok",
+        "data": {
+            "total": 128,
+            "ativos": 96,
+            "inativos": 32
+        }
+    }
+
 if __name__ == "__main__":
     app.run(debug=True)
