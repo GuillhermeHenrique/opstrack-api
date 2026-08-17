@@ -38,5 +38,17 @@ def produtos():
         }
     }
 
+@app.route("/sistema", methods=["GET"])
+def sistema():
+    return {
+        "status": "online",
+        "data": {
+            "uptime": "15 dias",
+            "cpu": 42,
+            "memory": 68,
+            "version": "1.0.0"
+        }
+    }
+
 if __name__ == "__main__":
     app.run(debug=True)
