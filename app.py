@@ -27,5 +27,16 @@ def usuarios():
         }
     }
 
+@app.route("/produtos", methods=["GET"])
+def produtos():
+    return {
+        "status": "ok",
+        "data": {
+            "total": 45,
+            "disponiveis": 38,
+            "indisponiveis": 7
+        }
+    }
+
 if __name__ == "__main__":
     app.run(debug=True)
